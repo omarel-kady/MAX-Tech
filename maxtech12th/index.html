@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Pulse Animation CSS -->
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#" id="search-icon">🔍</a>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search..."
+            style="display: none; width: 0; padding: 5px"
+          />
+          <a href="cart.html">🛒<span class="cart-count">7</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner with Pulsing Title -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="banner-content">
+          <h1>Welcome to MAX Tech</h1>
+          <p>
+            The ultimate destination for high-performance laptops, PC
+            components, and cutting-edge technology. Build your dream machine
+            with us!
+          </p>
+          <a href="#" id="btn-cat" class="btn-shop">Explore Our Categories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <div class="container">
+        <h2>Explore Our Categories</h2>
+        <p>Find the perfect laptops and components to match your needs.</p>
+        <div class="category-cards">
+          <div class="card">
+            <img src="assets/img/lap1.png" alt="Laptops" />
+            <h3>Laptops</h3>
+            <a href="#" id="btnlap" class="btn-category">Shop Laptops</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/motherbord.png" alt="PC Components" />
+            <h3>PC Components</h3>
+            <a href="#" class="btn-category">Shop Components</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/acces.png" alt="Accessories" />
+            <h3>Accessories</h3>
+            <a href="#" class="btn-category">Shop Accessories</a>
+          </div>
+
+          <!-- Hidden laptop cards -->
+          <div
+            class="card"
+            style="display: none; background-color: cornflowerblue"
+          >
+            <img src="assets/img/laptop.png" alt="Gaming Laptop" />
+            <h3 style="font-size: xx-large; color: navy">Laptop Categories</h3>
+          </div>
+          <div class="card" style="display: none">
+            <img src="assets/img/alfa.png" alt="Gaming Laptop" />
+            <h3>Gaming Laptop</h3>
+            <a href="#" class="btn-category">Shop Gaming Laptop</a>
+          </div>
+          <div class="card" style="display: none">
+            <img src="assets/img/business.png" alt="Business Laptop" />
+            <h3>Business Laptop</h3>
+            <a href="#" class="btn-category">Shop Business Laptop</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <p>Check out our handpicked selection of top-quality products.</p>
+        <div class="product-cards">
+          <div class="card">
+            <img src="assets/img/laptop.png" alt="High-Performance Laptop" />
+            <h3>Gaming Laptop</h3>
+            <p>$1899.00</p>
+            <a href="#" class="btn-product">View Details</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/4080.png" alt="Powerful GPU" />
+            <h3>RTX 4080 Graphics Card</h3>
+            <p>$1299.00</p>
+            <a href="#" class="btn-product">View Details</a>
+          </div>
+          <div class="card">
+            <img src="assets/img/moues.png" alt="Gaming Mouse" />
+            <h3>Wireless Gaming Mouse</h3>
+            <p>$99.00</p>
+            <a href="#" class="btn-product">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>MAX Tech</h2>
+            <ul>
+              <li>📍 123 Tech Street, Silicon Valley, CA 94040</li>
+              <li>📞 15215</li>
+              <li>📧 support@maxtech.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Shop Categories</h2>
+            <ul>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Processors</a></li>
+              <li><a href="#">Graphics Cards</a></li>
+              <li><a href="#">Motherboards</a></li>
+              <li><a href="#">Memory (RAM)</a></li>
+              <li><a href="#">Storage (SSDs & HDDs)</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Customer Support</h2>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 MAX Tech. All rights reserved. | Designed by MAX Team</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script>
+      $(document).ready(function () {
+      
+        // Add pulse animation to welcome message
+        $(".hero-banner h1").addClass("pulse");
+
+        // Categories section functionality
+        const btn9 = $("#btn-cat");
+        const cont = $(".categories");
+        cont.hide();
+
+        btn9.click(function (e) {
+          e.preventDefault();
+          cont.slideToggle();
+        });
+
+        const btn10 = $("#btnlap");
+        const card = $(".categories .card");
+        btn10.click(function (e) {
+          e.preventDefault();
+          card.show();
+          cont.slideDown();
+        });
+
+        // Featured products hover effect
+        $(".featured-products .card").hover(
+          function () {
+            const $card = $(this);
+            const index = $card.index(".featured-products .card");
+            let $descriptionDiv = $card.find(".product-hover-description");
+
+            if ($descriptionDiv.length === 0) {
+              $descriptionDiv = $("<div>")
+                .addClass("product-hover-description")
+                .hide();
+              $card.append($descriptionDiv);
+            }
+
+            if (index === 0) {
+              $descriptionDiv.html(`
+                <h4>Specifications:</h4>
+                <ul>
+                  <li>RAM: 16GB DDR4</li>
+                  <li>Storage: 512GB NVMe SSD</li>
+                  <li>Processor: Intel Core i7</li>
+                  <li>Graphics: NVIDIA RTX 3060</li>
+                </ul>
+              `);
+            } else {
+              $descriptionDiv.html(
+                `<p>More details available on the product page!</p>`
+              );
+            }
+
+            $descriptionDiv.stop(true, true).slideDown(300);
+          },
+          function () {
+            const $card = $(this);
+            $card
+              .find(".product-hover-description")
+              .stop(true, true)
+              .slideUp(300);
+          }
+        );
+        $("#search-icon").click(function (e) {
+          e.preventDefault();
+          const $input = $("#search-input");
+          if ($input.is(":visible")) {
+            $input.animate({ width: "0" }, 300, function () {
+              $input.hide();
+            });
+          } else {
+            $input.show().animate({ width: "150px" }, 300);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX Tech - Create Account</title>
+    <link rel="stylesheet" href="assets/css/authup.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="contact-info">
+                    <span>📧 support@maxtech.com</span>
+                    <span>📞 15215</span>
+                </div>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a class="logo" href="index.html">MAX Tech</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#">🔍</a>
+                <a href="cart.html">🛒<span class="cart-count">7</span></a>
+                <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container auth-page">
+        <div class="welcome-section">
+            <h1>Already have an account?</h1>
+            <p>Sign in to access your order history, saved items, and exclusive offers.</p>
+            <a href="sign-in.html" class="sign-in-button">SIGN IN</a>
+        </div>
+
+        <div class="create-account-section">
+            <h2>Create Account</h2>
+
+            <div class="social-login">
+                <div class="social-icon">f</div>
+                <div class="social-icon">G+</div>
+                <div class="social-icon">in</div>
+            </div>
+
+            <div class="or-use-account">or use your email for registration</div>
+
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <span id="name-validation-icon" role="alert"></span>
+                </div>
+
+                <div class="form-group"> 
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <span id="email-validation-icon" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                    <span id="age-validation-icon" role="alert"></span>
+                    <div id="age-warning-message" class="warning-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <span id="password-validation-icon" role="alert"></span>
+                    <div id="password-message" class="valid-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                    <span id="confirm-password-validation-icon" role="alert"></span>
+                    <div id="confirm-password-message" class="valid-message"></div>
+                </div>
+
+                <button type="submit" class="sign-up-button">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const ageInput = document.getElementById('age');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirm-password');
+
+            const nameValidationIcon = document.getElementById('name-validation-icon');
+            const emailValidationIcon = document.getElementById('email-validation-icon');
+            const ageValidationIcon = document.getElementById('age-validation-icon');
+            const passwordValidationIcon = document.getElementById('password-validation-icon');
+            const confirmPasswordValidationIcon = document.getElementById('confirm-password-validation-icon');
+
+            const ageWarningMessage = document.getElementById('age-warning-message');
+            const confirmPasswordMessage = document.getElementById('confirm-password-message');
+            const passwordMessage = document.getElementById('password-message');
+
+
+            // Basic validation for name and email (any input)
+            nameInput.addEventListener('input', function() {
+                if (nameInput.value.trim() !== '') {
+                    nameValidationIcon.textContent = '✅';
+                    nameValidationIcon.style.color = 'green';
+                } else {
+                    nameValidationIcon.textContent = '❌';
+                    nameValidationIcon.style.color = 'red';
+                }
+            });
+
+            emailInput.addEventListener('input', function() {
+                if (emailInput.value.trim() !== '') {
+                    emailValidationIcon.textContent = '✅';
+                    emailValidationIcon.style.color = 'green';
+                } else {
+                    emailValidationIcon.textContent = '❌';
+                    emailValidationIcon.style.color = 'red';
+                }
+            });
+
+
+            // Age validation logic
+            ageInput.addEventListener('input', function() {
+                const age = ageInput.value;
+                if (age < 12) {
+                    ageWarningMessage.textContent = "You must be at least 12 years old to register.";
+                    ageWarningMessage.style.color = 'red';
+                    ageValidationIcon.textContent = '❌';
+                    ageValidationIcon.style.color = 'red';
+                } else {
+                    ageWarningMessage.textContent = "";
+                    ageValidationIcon.textContent = '✅';
+                    ageValidationIcon.style.color = 'green';
+                }
+            });
+
+            // Password validation logic
+            function validatePassword(password) {
+                const hasLetter = /[a-zA-Z]/.test(password);
+                const hasNumber = /\d/.test(password);
+                const isValidLength = password.length >= 6;
+
+                if (hasLetter && hasNumber && isValidLength) {
+                    passwordMessage.textContent = "Password is valid.";
+                    passwordMessage.style.color = 'green';
+                    passwordValidationIcon.textContent = "✔️";
+                    passwordValidationIcon.style.color = 'green';
+                } else {
+                    passwordMessage.textContent = "Password must contain at least one letter, one number, and be at least 6 characters long.";
+                    passwordMessage.style.color = 'red';
+                    passwordValidationIcon.textContent = "❌";
+                    passwordValidationIcon.style.color = 'red';
+                }
+            }
+
+            passwordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                validatePassword(password);
+            });
+
+            // Confirm password validation logic
+            confirmPasswordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                const confirmPassword = confirmPasswordInput.value;
+                if (password !== confirmPassword) {
+                    confirmPasswordMessage.textContent = "Passwords do not match.";
+                    confirmPasswordMessage.style.color = 'red';
+                    confirmPasswordValidationIcon.textContent = '❌';
+                    confirmPasswordValidationIcon.style.color = 'red';
+                } else {
+                    confirmPasswordMessage.textContent = "Passwords match.";
+                    confirmPasswordMessage.style.color = 'green';
+                    confirmPasswordValidationIcon.textContent = '✔️';
+                    confirmPasswordValidationIcon.style.color = 'green';
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

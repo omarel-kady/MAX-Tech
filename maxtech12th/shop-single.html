@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - Product Detail</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Unified CSS file -->
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#">🔍</a>
+          <a href="cart.html">🛒<span id="cart-count" class="cart-count">2</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-content">
+          <div class="product-images">
+            <div class="main-image">
+              <img
+                src="assets/img/alfa.png"
+                alt="Product Image"
+                id="mainimage"
+              />
+            </div>
+            <div class="thumbnail-images">
+              <div class="thumbnail">
+                <img
+                  src="assets/img/a1.png"
+                  alt="Thumbnail 1"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="assets/img/a2.png"
+                  alt="Thumbnail 2"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="assets/img/a3.png"
+                  alt="Thumbnail 3"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="assets/img/a4.png"
+                  alt="Thumbnail 4"
+                  onclick="changeImage(this)"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="assets/img/a5.png"
+                  alt="Thumbnail 5"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h1>Gaming Laptop - Alpha X15</h1>
+            <p class="price" id="p1">$1800.00</p>
+            <div class="rating">
+              <span>⭐️⭐️⭐️⭐️☆</span>
+              <span>4.5 | 42 Reviews</span>
+            </div>
+            <div class="brand"><strong>Brand:</strong> AlphaTech</div>
+            <div class="description">
+              <h3>Description:</h3>
+              <p>
+                Dominate the competition with the Alpha X15 gaming laptop.
+                Featuring the latest Intel Core i9 processor, NVIDIA GeForce RTX
+                4080 graphics, and a stunning 15.6" QHD display with a 240Hz
+                refresh rate.
+              </p>
+            </div>
+            <div class="specifications">
+              <h3>Specifications:</h3>
+              <ul>
+                <li><strong>Processor:</strong> Intel Core i9-13900HX</li>
+                <li>
+                  <strong>Graphics:</strong> NVIDIA GeForce RTX 4080 12GB GDDR6
+                </li>
+                <li id="ramSpec"><strong>Memory:</strong> 32GB DDR5 5600MHz</li>
+                <li id="storageSpec">
+                  <strong>Storage:</strong> 1TB NVMe PCIe Gen4 SSD
+                </li>
+                <li><strong>Display:</strong> 15.6" QHD (2560x1440) 240Hz</li>
+                <li><strong>Operating System:</strong> Windows 11 Home</li>
+              </ul>
+            </div>
+            <form class="product-form">
+              <div class="options">
+                <strong>RAM Options:</strong>
+                <button
+                  type="button"
+                  onclick="changeRamSpecification('32GB DDR4 3200MHz')"
+                >
+                  32GB RAM
+                </button>
+                <button
+                  type="button"
+                  onclick="changeRamSpecification('64GB DDR5 6000MHz')"
+                >
+                  64GB RAM
+                </button>
+              </div>
+              <div class="options">
+                <strong>SSD Options:</strong>
+                <button
+                  type="button"
+                  onclick="changeStorageSpecification('1TB NVMe PCIe Gen4 SSD')"
+                >
+                  1TB
+                </button>
+                <button
+                  type="button"
+                  onclick="changeStorageSpecification('2TB NVMe PCIe Gen4 SSD')"
+                >
+                  2TB
+                </button>
+              </div>
+              <div class="quantity">
+                <strong>Quantity:</strong>
+                <button
+                  type="button"
+                  class="btn-quantity"
+                  onclick="decreaseQuantity('laptopQty')"
+                >
+                  -
+                </button>
+                <span class="quantity-value" id="laptopQty">1</span>
+                <button
+                  type="button"
+                  class="btn-quantity"
+                  onclick="increaseQuantity('laptopQty')"
+                >
+                  +
+                </button>
+              </div>
+              <div class="actions">
+                <button
+                  type="button"
+                  class="btn-buy"
+                  onclick="window.location.href='payment.html'"
+                >
+                  Buy Now
+                </button>
+                <button type="button" class="btn-add-to-cart" onclick="addtocart()">
+                  Add to Cart
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>MAX Tech</h2>
+            <ul>
+              <li>📍 123 Tech Street, Silicon Valley, CA 94040</li>
+              <li>📞 15215</li>
+              <li>📧 support@maxtech.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Shop Categories</h2>
+            <ul>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Processors</a></li>
+              <li><a href="#">Graphics Cards</a></li>
+              <li><a href="#">Motherboards</a></li>
+              <li><a href="#">Memory (RAM)</a></li>
+              <li><a href="#">Storage (SSDs & HDDs)</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Customer Support</h2>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 MAX Tech. All rights reserved. | Designed by MAX Team</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+              function addtocart() {
+          let cart = document.getElementById("cart-count");
+          cart.innerHTML = parseInt(cart.innerHTML) + 1;
+        }
+
+      // image change script
+      function changeImage(clickedImage) {
+                    const mainImage = document.getElementById("mainimage");
+                    mainImage.src = clickedImage.src;
+                  }
+
+
+      //price update scripts 
+
+      // Store the base price outside the function so it doesn't reset every time
+      const basePrice = 1800.00;
+      let currentRamText = "32GB DDR4 3200MHz"; 
+      let currentStorageText = "1TB NVMe PCIe Gen4 SSD"; 
+
+      function changeRamSpecification(ramText) {
+        document.getElementById("ramSpec").innerHTML ="<strong>Memory:</strong> " + ramText;
+        currentRamText = ramText; // Update the current RAM text
+        updatePrice(); 
+      }
+
+      function changeStorageSpecification(storageText) {
+        document.getElementById("storageSpec").innerHTML ="<strong>Storage:</strong> " + storageText;
+        currentStorageText = storageText; // Update the current Storage text
+        updatePrice(); 
+      }
+
+      
+      function increaseQuantity(qtyId) {
+        let qtyElem = document.getElementById(qtyId);
+        let qty = parseInt(qtyElem.innerText);
+        qty++;
+        qtyElem.innerText = qty;
+        updatePrice(); 
+      }
+
+      function decreaseQuantity(qtyId) {
+        let qtyElem = document.getElementById(qtyId);
+        let qty = parseInt(qtyElem.innerText);
+        if (qty > 1) {
+          qty--;
+          qtyElem.innerText = qty;
+          updatePrice(); 
+        }
+      }
+
+      function updatePrice() {
+        
+        const quantity = parseInt(document.getElementById("laptopQty").innerText);
+
+        let ramPriceAdjustment = 0;
+        if (currentRamText === "64GB DDR5 6000MHz") {
+          ramPriceAdjustment = 700;
+        }
+       
+        let storagePriceAdjustment = 0;
+        if (currentStorageText === "2TB NVMe PCIe Gen4 SSD") {
+          storagePriceAdjustment = 1000;
+        }
+
+        const totalPrice = (basePrice + ramPriceAdjustment + storagePriceAdjustment) * quantity;
+
+        const priceElement = document.getElementById("p1");
+
+        priceElement.innerText = "$" + totalPrice; 
+      }   
+    </script>
+  </body>
+</html>

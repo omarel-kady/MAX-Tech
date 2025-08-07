@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - About</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Unified CSS file -->
+    <style>
+      /* Dark Mode Styling */
+      .dark-mode {
+        background-color: #222222dc;
+        color: white;
+      }
+       /* Add this style to initially position the image off-screen */
+      .about-banner .image-content img {
+        position: relative;
+        right: -700px; /* Start off-screen to the right */
+      }
+      .brand-desc {
+        display: none;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 10px;
+    font-weight: 300;
+    padding: 15px 15px;
+    margin-top: 50px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .brand-item {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .brand-item img {
+    cursor: pointer;
+    max-width: 120px;
+    transition: transform 0.3s ease;
+  }
+
+  .brand-item img:hover {
+    transform: scale(1.1);
+  }
+    </style>
+  </head>
+  <body>
+    <button onclick="enableDarkMode()" id="dark">Enable Dark Mode</button>
+
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#">🔍</a>
+          <a href="cart.html">🛒<span class="cart-count">7</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Banner -->
+    <section class="about-banner">
+      <div class="container">
+        <div class="banner-content">
+          <div class="text-content">
+            <h1>About MAX Tech</h1>
+            <p>
+              Welcome to MAX Tech, your trusted source for high-performance
+              laptops, PC components, and accessories. We are dedicated to
+              providing the latest technology at competitive prices, with a
+              focus on quality and customer satisfaction. Our mission is to
+              empower gamers, creators, and professionals with the tools they
+              need to achieve their maximum potential.
+            </p>
+          </div>
+          <div class="image-content">
+            <img src="assets/img/tech.png" alt="About Hero" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <h2>Why Choose MAX Tech?</h2>
+        <p>
+          At MAX Tech, we are committed to providing an exceptional shopping
+          experience. Here’s what makes us stand out:
+        </p>
+        <div class="service-cards">
+          <div class="card">
+            <span>🚚</span>
+            <h3>Fast & Reliable Shipping</h3>
+            <p>Get your orders delivered quickly and securely.</p>
+          </div>
+          <div class="card">
+            <span>🔄</span>
+            <h3>Hassle-Free Returns</h3>
+            <p>Easy returns and exchanges within 30 days.</p>
+          </div>
+          <div class="card">
+            <span>🎉</span>
+            <h3>Competitive Prices</h3>
+            <p>We offer the best prices on the latest tech.</p>
+          </div>
+          <div class="card">
+            <span>👩‍💻</span>
+            <h3>Expert Support</h3>
+            <p>Our knowledgeable team is here to help you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+      <div class="container">
+        <h2>Our Trusted Brands</h2>
+        <p>
+          We partner with leading brands in the tech industry to bring you the
+          best products.
+        </p>
+        <div class="brand-carousel">
+          <div class="brand-item">
+            <img src="assets/img/pngwing.com (1).png" alt="Intel" />
+            <p class="brand-desc" style="display:none;">Intel is a leading manufacturer of processors and chipsets.</p>
+          </div>
+          <div class="brand-item">
+            <img src="assets/img/pngwing.com (2).png" alt="Nvidia" />
+            <p class="brand-desc" style="display:none;">Nvidia specializes in GPUs for gaming and AI computing.</p>
+          </div>
+          <div class="brand-item">
+            <img src="assets/img/pngwing.com (3).png" alt="AMD" />
+            <p class="brand-desc" style="display:none;">AMD produces CPUs and GPUs known for performance and value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>MAX Tech</h2>
+            <ul>
+              <li>📍 123 Tech Street, Silicon Valley, CA 94040</li>
+              <li>📞 15215</li>
+              <li>📧 support@maxtech.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Shop Categories</h2>
+            <ul>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Processors</a></li>
+              <li><a href="#">Graphics Cards</a></li>
+              <li><a href="#">Motherboards</a></li>
+              <li><a href="#">Memory (RAM)</a></li>
+              <li><a href="#">Storage (SSDs & HDDs)</a></li>
+            </ul>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script> 
+
+      $(document).ready(function() {
+      $(".about-banner .image-content img").animate({
+    right: "0px"
+  }, 2000);
+});
+
+    </script>
+    <script>
+      function enableDarkMode() {
+          const body = document.body;
+          body.classList.toggle("dark-mode");
+
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+    $(".brand-item img").click(function () {
+      $(this).next(".brand-desc").slideToggle("slow");
+    });
+  });
+    </script>
+          <div class="footer-section">
+            <h2>Customer Support</h2>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 MAX Tech. All rights reserved. | Designed by MAX Team</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

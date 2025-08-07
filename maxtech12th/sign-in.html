@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - Sign In</title>
+    <link rel="stylesheet" href="assets/css/authin.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("input").focus(function () {
+          $(this).css("background-color", "lightblue");
+        });
+        $("input").blur(function () {
+          $(this).css("background-color", "lightgreen");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#">🔍</a>
+          <a href="cart.html">🛒<span class="cart-count">7</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container auth">
+      <div class="sign-in-section">
+        <h1>Sign In</h1>
+
+        <div class="social-login">
+          <div class="social-icon">f</div>
+          <div class="social-icon">G+</div>
+          <div class="social-icon">in</div>
+        </div>
+
+        <div class="or-use-account">or use your account</div>
+
+        <form>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+          </div>
+
+          <button type="submit" class="sign-in-button">SIGN IN</button>
+        </form>
+      </div>
+
+      <div class="sign-up-section">
+        <h2>New to MAX Tech?</h2>
+        <p>
+          Create an account to explore our wide selection of laptops,
+          components, and accessories.
+        </p>
+        <a href="sign-up.html" class="sign-up-button">SIGN UP</a>
+      </div>
+    </div>
+  </body>
+</html>

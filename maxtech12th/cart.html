@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - Shopping Cart</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".cart-item").dblclick(function () {
+  $(this).hide();
+});
+      });
+    </script>
+    <!-- Add your specific shopping cart styles if needed -->
+    <style>
+      .cart-container {
+        padding: 20px;
+      }
+
+      .cart-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+      }
+
+      .cart-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .cart-item-details {
+        flex: 1;
+      }
+
+      .cart-item-quantity {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .cart-item-quantity button {
+        padding: 5px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+
+      .cart-total {
+        margin-top: 20px;
+        text-align: right;
+      }
+
+      .checkout-button {
+        background-color: #5ba66a;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#">🔍</a>
+          <a href="cart.html">🛒<span class="cart-count">3</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Shopping Cart Content -->
+    <div class="container cart-container">
+      <h2>Shopping Cart</h2>
+
+
+    <!-- Shopping Cart Content -->
+    <div class="container cart-container">
+      <h2>Shopping Cart</h2>
+
+      <!-- Cart Item 1 -->
+      <div class="cart-item" id="p1" data-price="1799.99" >
+          <img src="assets/img/alfa.png" alt="Gaming Laptop">
+          <div class="cart-item-details">
+              <h3>Gaming Laptop - Alpha X15</h3>
+              <p id="price1">$1799.99</p>
+          </div>
+          <div class="cart-item-quantity">
+              <button onclick="decreaseQuantity('q1', 'price1', 1799.99)">-</button>
+              <span id="q1">1</span>
+              <button onclick="increaseQuantity('q1', 'price1', 1799.99)">+</button>
+          </div>
+          <button onclick="removeItem('p1')">Remove</button>
+      </div>
+
+      <!-- Example Cart Item -->
+      <div class="cart-item" id="cart-item2">
+        <img src="assets/img/core i9.png" alt="core i9" />
+        <div class="cart-item-details">
+          <h3>core i9 <span id="i9" ></span></h3>
+          <p id="price2">$1398.00</p>
+        </div>
+        <div class="cart-item-quantity">
+            <button onclick="decreaseQuantity('q2', 'price2', 699.00)">-</button>
+            <span id="q2">2</span>
+            <button onclick="increaseQuantity('q2', 'price2', 699.00)">+</button>
+        </div>
+        <button onclick="removeItem('p2')">Remove</button>
+        
+
+    </div>
+
+      <!-- Cart Total -->
+      <div class="cart-total">
+        <h3 id="cartTotal">Total: $4297.98</h3>
+        <button class="checkout-button" onclick="outofstock()">Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>MAX Tech</h2>
+            <ul>
+              <li>📍 123 Tech Street, Silicon Valley, CA 94040</li>
+              <li>📞 15215</li>
+              <li>📧 support@maxtech.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Shop Categories</h2>
+            <ul>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Processors</a></li>
+              <li><a href="#">Graphics Cards</a></li>
+              <li><a href="#">Motherboards</a></li>
+              <li><a href="#">Memory (RAM)</a></li>
+              <li><a href="#">Storage (SSDs & HDDs)</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Customer Support</h2>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 MAX Tech. All rights reserved. | Designed by MAX Team</p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

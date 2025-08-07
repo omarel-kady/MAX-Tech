@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX Tech - Product Catalog</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".product-card").hover(
+          function () {
+            $(this).css("background-color", "#f0f0f0");
+            $(this).find("h3, .price").css("color", "#007bff");
+          },
+          function () {
+            $(this).css("background-color", "");
+            $(this).find("h3, .price").css("color", "");
+          }
+        );
+        // Discount banner animation
+        $("#discount-banner")
+          .slideDown(800)
+          .animate({ top: "0px" }, 500)
+          .delay(4000)
+          .fadeOut(1000);
+      });
+    </script>
+
+    <!-- Unified CSS file -->
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-content">
+          <div class="contact-info">
+            <span>📧 support@maxtech.com</span>
+            <span>📞 15215</span>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Nav -->
+    <nav class="main-nav">
+      <div class="container">
+        <a class="logo" href="index.html">MAX Tech</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#">🔍</a>
+          <a href="cart.html">🛒<span class="cart-count">7</span></a>
+          <a href="sign-in.html">👤<span class="user-count">+99</span></a>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="discount-banner"
+      style="
+        display: none;
+        position: fixed;
+        top: -100px;
+        width: 100%;
+        background: crimson;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.2rem;
+        z-index: 9999;
+      "
+    >
+      🔥 20% OFF on Gaming Laptops! Limited Time Offer!
+    </div>
+
+    <!-- Product Listing Section -->
+    <section class="product-listing">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h2>Categories</h2>
+            <ul class="categories-list">
+              <li>
+                <a href="#">Laptops</a>
+                <ul>
+                  <li><a href="#">Gaming Laptops</a></li>
+                  <li><a href="#">Ultrabooks</a></li>
+                  <li><a href="#">Workstations</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">PC Components</a>
+                <ul>
+                  <li><a href="#">Processors</a></li>
+                  <li><a href="#">Motherboards</a></li>
+                  <li><a href="#">Graphics Cards</a></li>
+                  <li><a href="#">Memory (RAM)</a></li>
+                  <li><a href="#">Storage (SSDs & HDDs)</a></li>
+                  <li><a href="#">Power Supplies</a></li>
+                  <li><a href="#">Cases</a></li>
+                  <li><a href="#">Cooling</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Accessories</a>
+                <ul>
+                  <li><a href="#">Keyboards</a></li>
+                  <li><a href="#">Mice</a></li>
+                  <li><a href="#">Headsets</a></li>
+                  <li><a href="#">Monitors</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="filters">
+              <div class="filter-options">
+                <a href="#" class="active">All</a>
+                <a href="#">Laptops</a>
+                <a href="#">Components</a>
+                <a href="#">Accessories</a>
+              </div>
+              <div class="sort-options">
+                <select>
+                  <option>Featured</option>
+                  <option>A to Z</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="product-grid">
+              <div class="product-card">
+                <img
+                  src="assets/img/alfa.png"
+                  alt="Product 1"
+                  id="img-laptop"
+                />
+                <h3>Gaming Laptop - Alpha X15</h3>
+                <p class="price">$1799.99</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/core i9.png" alt="Product 2" />
+                <h3>core i9</h3>
+                <p class="price">$699.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img
+                  src="assets/img/gallery-5-pro-x-superlight-2-gaming-mouse-magenta.webp"
+                  alt="Product 3"
+                />
+                <h3>Logitech G Pro X Superlight</h3>
+                <p class="price">$129.99</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/harddisk.jpg" alt="Product 4" />
+                <h3>Harddisk 500GB</h3>
+                <p class="price">$124.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart" id="harddiskAddToCart"
+                    >Add to Cart</a
+                  >
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/4080.png" alt="Product 5" />
+                <h3>NVIDIA GeForce RTX 4080</h3>
+                <p class="price">$799.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/ssd.png" alt="Product 6" />
+                <h3>Kingston SSD 500GB</h3>
+                <p class="price">$179.99</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/keyboard.png" alt="Product 7" />
+                <h3>Gaming keyboard</h3>
+                <p class="price">$249.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/ram.png" alt="Product 8" />
+                <h3>HyperX Ram 32GB</h3>
+                <p class="price">$149.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-card">
+                <img src="assets/img/moniter.png" alt="Product 9" />
+                <h3>ASUS ROG Strix 27" Monitor</h3>
+                <p class="price">$399.00</p>
+                <div class="actions">
+                  <a href="shop-single.html" class="btn-view">View</a>
+                  <a href="#" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>MAX Tech</h2>
+            <ul>
+              <li>📍 123 Tech Street, Silicon Valley, CA 94040</li>
+              <li>📞 15215</li>
+              <li>📧 support@maxtech.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Shop Categories</h2>
+            <ul>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Processors</a></li>
+              <li><a href="#">Graphics Cards</a></li>
+              <li><a href="#">Motherboards</a></li>
+              <li><a href="#">Memory (RAM)</a></li>
+              <li><a href="#">Storage (SSDs & HDDs)</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Customer Support</h2>
+            <ul>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 MAX Tech. All rights reserved. | Designed by MAX Team</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alert Overlay -->
+    <div class="alert-overlay" id="harddiskAlert">
+      <div class="alert-box">
+        <h2>Out of Stock</h2>
+        <p>
+          We're sorry, but this product is currently unavailable. Please check
+          back later.
+        </p>
+        <button onclick="closeAlert('harddiskAlert')">OK</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
